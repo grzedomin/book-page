@@ -1,4 +1,4 @@
-# DEMO: https://github.com/grzedomin/book-page
+# DEMO: https://grzedomin.github.io/book-page/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
