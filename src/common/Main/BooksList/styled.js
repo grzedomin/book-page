@@ -19,7 +19,7 @@ padding: 15px;
 
 
 `
-export const BookImg = styled.div`
+export const BookImg = styled.img`
     height: 300px;
     width: 200px;
     background-color: crimson;
