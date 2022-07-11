@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
 export const SearchBar = styled.section`
-    background-color: crimson;
     display: flex;
-    max-width: 600px;
-    width: 100%;
 
     @media (max-width: 767px){
         flex-direction: column;
@@ -12,11 +9,11 @@ export const SearchBar = styled.section`
 `
 
 export const Input = styled.input`
-    flex-basis: 75%;
+    flex-basis: 80%;
     min-height: 30px;    
     border: 1px solid #bbb;
-    border-radius: 3px;
-    padding: 5px;
+    border-radius: 6px;
+    padding: 10px;
     margin-right: 50px;
 
     @media (max-width: 767px){
@@ -26,15 +23,23 @@ export const Input = styled.input`
     
 `;
 
-export const Button = styled.button`
-    background-color: teal;
-    color: #fff;
+export const Button = styled.button` 
+    flex-basis: 10%;
+    color: black;
     padding: 10px;
     font-size: 15px;
     border: none;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(175, 175, 175, 0.85);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(175, 175, 175, 0.85);
+    box-shadow: 0px 0px 2px 0px rgba(175, 175, 175, 0.85);
+    
 
     &:hover {
-        background-color: green;
+        background-color: #5D6F68;
+        color: white;
+        cursor: pointer;
+        transition: .3s;
     }
 
     @media (max-width: 767px){
