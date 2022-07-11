@@ -1,5 +1,5 @@
 
-import { Wrapper, Tile, BookImg, Info } from "./styled"
+import { Wrapper, Tile, BookImg, Info, Title, Author, Category } from "./styled"
 
 const BooksList = ({ books }) => {
 
@@ -7,11 +7,11 @@ const BooksList = ({ books }) => {
         <Wrapper>
             {books.map((book) => (
                 <Tile key={book.id}>
-                    <BookImg src={book.volumeInfo.imageLinks.thumbnail}></BookImg>
+                    <BookImg src={book.volumeInfo.imageLinks.thumbnail} alt=""></BookImg>
                     <Info>
-                        {book.volumeInfo.title} <br />
-                        {book.volumeInfo.authors}<br />
-                        {book.volumeInfo.categories}<br />
+                        <Title>{book.volumeInfo.title}</Title>
+                        <Author>{book.volumeInfo.authors}</Author>
+                        <Category>{book.volumeInfo.categories ? book.volumeInfo.categories : "No category"}</Category>
                     </Info>
                 </Tile>
             )
