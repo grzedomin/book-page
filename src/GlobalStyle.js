@@ -11,5 +11,6 @@ html {
 body {
     background-color: #fff;
     font-family: 'Poppins', sans-serif;
+    margin: 10px 20px;
 }
 `;
