@@ -5,6 +5,7 @@ export const SearchBar = styled.section`
 
     @media (max-width: 767px){
         flex-direction: column;
+        align-items: stretch;
     }
 `
 
@@ -16,9 +17,15 @@ export const Input = styled.input`
     padding: 10px;
     margin-right: 50px;
 
+    @media (max-width: 1200px){
+        flex-basis: 70%;
+        margin-right: 40px;
+    }
+
     @media (max-width: 767px){
         flex-basis: 100%;
         margin-right: 0;
+        margin-bottom: 18px;
     }
     
 `;
@@ -42,8 +49,13 @@ export const Button = styled.button`
         transition: .3s;
     }
 
+    @media (max-width: 1200px){
+       flex-basis: 30%;
+    }
+
     @media (max-width: 767px){
-        flex-direction: column;
+        flex-direction: row;
+        flex-basis: 50%;
         padding: 10px;
         margin-top: 5px;
         margin-bottom: 5px;
