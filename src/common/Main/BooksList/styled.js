@@ -5,6 +5,20 @@ export const Wrapper = styled.section`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
+
+    @media (max-width: 1200px){
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+    }
+
+    @media (max-width: 767px){
+        margin-top: 30px;
+        grid-template-columns: 1fr;
+        grid-gap: 25px;
+        justify-items: center;
+    }
 `;
 
 export const Tile = styled.div`
