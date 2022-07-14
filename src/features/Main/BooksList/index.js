@@ -5,14 +5,19 @@ const BooksList = ({ books }) => {
     return (
         <Wrapper>
             {books.map((book) => {
-                
+
+                const thumbnail = book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail;
+                const title = book.volumeInfo.title;
+                const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(<br />) : "author undefined";
+                const categories = book.volumeInfo.categories ? book.volumeInfo.categories : "No category";
+
                 return (
                     <Tile key={book.id}>
-                        <BookImg src={book.volumeInfo.imageLinks.thumbnail}></BookImg>
+                        <BookImg src={thumbnail} alt=""></BookImg>
                         <Info>
-                            <Title>{book.volumeInfo.title}</Title>
-                            <Author>{book.authors}</Author>
-                            <Category>{book.volumeInfo.categories ? book.volumeInfo.categories : "No category"}</Category>
+                            <Title>{title}</Title>
+                            <Author>{authors}</Author>
+                            <Category>{categories}</Category>
                         </Info>
                     </Tile>
                 )
