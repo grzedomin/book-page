@@ -3,7 +3,7 @@ import { useState } from "react";
 import { APIKey } from "./APIKey";
 
 export const useFetchData = () => {
-    const [search, setSearch] = useState("cat");
+    const [search, setSearch] = useState("");
     const [books, setBooks] = useState([]);
 
 
