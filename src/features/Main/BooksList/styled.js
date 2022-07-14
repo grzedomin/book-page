@@ -33,7 +33,7 @@ export const Tile = styled.div`
     box-shadow: rgb(186 199 213 / 50%) 0px 4px 12px;
 `
 
-export const Info = styled.span`
+export const Info = styled.div`
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -60,7 +60,7 @@ export const Author = styled.h3`
     letter-spacing: 0.03em;
 `
 
-export const Category = styled.div`
+export const Category = styled.h4`
     font-size: 12px;
     margin: 0;
     border: none;
