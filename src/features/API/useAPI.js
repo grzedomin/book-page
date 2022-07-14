@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { APIKey } from "./APIKey";
 
 export const useFetchData = () => {
     const [search, setSearch] = useState("cat");
@@ -8,11 +9,10 @@ export const useFetchData = () => {
 
     const searchBook = async () => {
         try {
-            //const response = await axios(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyDG27f8yM5ScYwth9cESzM1JhPP4YiXJos`)
-            const response = await axios(`https://gnikdroy.pythonanywhere.com/api/book/?${search}`);
-            console.log(response.data.results)
-            setBooks(response.data.results);
-            
+            const response = await axios(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${APIKey}`);
+            console.log(response.data.items)
+            setBooks(response.data.items);
+
         } catch (error) {
             console.log(error);
         }

@@ -2,29 +2,17 @@
 import { Wrapper, Tile, BookImg, Info, Title, Author, Category } from "./styled"
 
 const BooksList = ({ books }) => {
-
-    //{book.volumeInfo.categories ? book.volumeInfo.categories : "No category"}
-    //src={book.volumeInfo.imageLinks.thumbnail} 
     return (
         <Wrapper>
             {books.map((book) => {
-
-                let photo = book.resources.find(resource => {
-                    if (resource.type === "image/jpeg" && resource.uri.includes("medium")) {
-                        console.log(resource.uri)
-                        return resource.uri
-                        
-                    } return null;
-                })
-
-                console.log(photo);
+                
                 return (
                     <Tile key={book.id}>
-                        <BookImg src={photo} alt=""></BookImg>
+                        <BookImg src={book.volumeInfo.imageLinks.thumbnail}></BookImg>
                         <Info>
-                            <Title>{book.title}</Title>
-                            <Author>{book.agents.person}</Author>
-                            <Category></Category>
+                            <Title>{book.volumeInfo.title}</Title>
+                            <Author>{book.authors}</Author>
+                            <Category>{book.volumeInfo.categories ? book.volumeInfo.categories : "No category"}</Category>
                         </Info>
                     </Tile>
                 )
