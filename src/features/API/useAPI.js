@@ -8,8 +8,11 @@ export const useFetchData = () => {
 
     const searchBook = async () => {
         try {
-            const response = await axios(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyDG27f8yM5ScYwth9cESzM1JhPP4YiXJos`)
-            setBooks(response.data.items);
+            //const response = await axios(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyDG27f8yM5ScYwth9cESzM1JhPP4YiXJos`)
+            const response = await axios(`https://gnikdroy.pythonanywhere.com/api/book/?${search}`);
+            console.log(response.data.results)
+            setBooks(response.data.results);
+            
         } catch (error) {
             console.log(error);
         }
