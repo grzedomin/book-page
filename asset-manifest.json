@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/book-page/static/js/main.6c100b26.js",
+    "main.js": "/book-page/static/js/main.135b0619.js",
     "static/js/787.3538febe.chunk.js": "/book-page/static/js/787.3538febe.chunk.js",
     "index.html": "/book-page/index.html",
-    "main.6c100b26.js.map": "/book-page/static/js/main.6c100b26.js.map",
+    "main.135b0619.js.map": "/book-page/static/js/main.135b0619.js.map",
     "787.3538febe.chunk.js.map": "/book-page/static/js/787.3538febe.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.6c100b26.js"
+    "static/js/main.135b0619.js"
   ]
 }
