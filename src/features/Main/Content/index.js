@@ -1,9 +1,29 @@
+import ErrorBox from "./ErrorBox";
+import { BooksContainer } from "./Books";
 
-import { Wrapper, Tile, BookImg, Info, Title, Author, Category } from "./styled"
 
-const BooksList = ({ books }) => {
-    return (
-        <Wrapper>
+export const Content = ({ books, fetchState }) => {
+
+    switch (fetchState) {
+        case "initial":
+            return null;
+
+        case "error":
+            return <ErrorBox />;
+
+        case "success":
+            return <BooksContainer books={books} />;
+
+        default: 
+            return null;
+    }
+};
+
+
+
+/*
+
+<Wrapper>
             {books.map((book) => {
 
                 const thumbnail = book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail;
@@ -24,7 +44,5 @@ const BooksList = ({ books }) => {
             }
             )}
         </Wrapper>
-    );
-};
 
-export default BooksList;
+*/
