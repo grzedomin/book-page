@@ -10,18 +10,15 @@ export const useAPI = () => {
     });
 
     useEffect(() => {
-        console.log('dobry console log', status)
     }, [status])
 
     const searchBook = async () => {
         try {
-            const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${APIKey}&maxResults=40`);
-            console.log(response.data.items)
+            const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(search)}&key=${encodeURIComponent(APIKey)}&maxResults=40`);
             setBooks(response.data.items);
             setStatus({
                 state: "success",
             });
-            console.log(status)
 
         } catch (error) {
             console.log(error);
