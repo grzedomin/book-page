@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { APIKey } from "./APIKey";
 
 export const useAPI = () => {
-    const [search, setSearch] = useState("");
+    const [bookName, setBookName] = useState("");
     const [books, setBooks] = useState([]);
     const [status, setStatus] = useState({
         state: "initial",
@@ -14,7 +14,7 @@ export const useAPI = () => {
 
     const searchBook = async () => {
         try {
-            const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(search)}&key=${encodeURIComponent(APIKey)}&maxResults=40`);
+            const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(bookName)}&key=${encodeURIComponent(APIKey)}&maxResults=40`);
             setBooks(response.data.items);
             setStatus({
                 state: "success",
@@ -27,5 +27,5 @@ export const useAPI = () => {
             })
         }
     }
-    return { books, search, setSearch, searchBook, status };
+    return { books, bookName, setBookName, searchBook, status };
 };

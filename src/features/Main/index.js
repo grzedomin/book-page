@@ -5,13 +5,13 @@ import { useAPI } from "../API/useAPI";
 
 const Section = () => {
 
-    const { books, search, setSearch, searchBook, status } = useAPI();
+    const { books, bookName, setBookName, searchBook, status } = useAPI();
 
     return (
         <Wrapper>
             <Search
-                search={search}
-                setSearch={setSearch}
+                bookName={bookName}
+                setBookName={setBookName}
                 searchBook={searchBook}
             />
             <Content
