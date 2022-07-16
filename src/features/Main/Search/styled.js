@@ -8,6 +8,10 @@ export const SearchBar = styled.section`
         align-items: stretch;
     }
 `
+export const StyledForm = styled.form`
+    display: flex;
+    flex-basis: 100%;
+`;
 
 export const Input = styled.input`
     flex-basis: 80%;
