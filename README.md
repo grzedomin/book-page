@@ -1,15 +1,11 @@
 # Book page App
 
-## This page is in progress of building.
+### DEMO: https://grzedomin.github.io/book-page/
 
-## On this website you will be able to search any book that you want to see, see the informations about, read it, mark as favourite, filter from newest to oldest. 
+### This page is in progress of building.
 
+### On this website you will be able to search any book that you want to see, see the informations, mark as favourite.
 
-## DEMO: https://grzedomin.github.io/book-page/
-
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
