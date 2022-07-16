@@ -1,11 +1,11 @@
 import { Content } from "./Content";
 import { Search } from "./Search";
 import { Wrapper } from "./styled";
-import { useFetchData } from "../API/useAPI";
+import { useAPI } from "../API/useAPI";
 
 const Section = () => {
 
-    const { books, search, setSearch, searchBook, fetchState } = useFetchData();
+    const { books, search, setSearch, searchBook, status } = useAPI();
 
     return (
         <Wrapper>
@@ -16,7 +16,7 @@ const Section = () => {
             />
             <Content
                 books={books}
-                fetchState={fetchState}
+                status={status}
             />
         </Wrapper>
     );

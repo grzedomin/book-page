@@ -2,9 +2,9 @@ import ErrorBox from "./ErrorBox";
 import { BooksContainer } from "./Books";
 
 
-export const Content = ({ books, fetchState }) => {
+export const Content = ({ books, status }) => {
 
-    switch (fetchState) {
+    switch (status.state) {
         case "initial":
             return null;
 
